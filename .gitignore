@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+# Archivos con claves (no subir a GitHub)
+.env*
+*.env
+!.env.example
+
+# Imágenes subidas desde el sistema
+uploads/
+
+# Copias locales y paquetes temporales
+.respaldo_crm/
+.paquete_*

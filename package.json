@@ -1,0 +1,47 @@
+{
+  "name": "radical-gym",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "iniciar": "npm install && npm run dev",
+    "predev": "node scripts/liberar-puertos.cjs",
+    "dev": "concurrently -k -n API,WEB -c blue,green \"node --watch servidor/index.js\" \"vite\"",
+    "api": "node servidor/index.js",
+    "web": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node servidor/index.js",
+    "produccion": "npm ci && npm run build && npm start"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "bcryptjs": "^2.4.3",
+    "canvas-confetti": "^1.9.4",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "html2canvas": "^1.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.9",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "mysql2": "^3.11.5",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "recharts": "^3.10.1",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
